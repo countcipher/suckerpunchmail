@@ -1,0 +1,140 @@
+@font-face {
+    font-family: Permanent Marker;
+    src: url("fonts/Marker/Marker.ttf");
+}
+
+#mask {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(teal, white);
+    height: 100%;
+    overflow-y: scroll;
+    background-attachment: fixed;
+}
+
+#logo {
+    display: block;
+    margin: auto;
+}
+
+#sendMail {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    background: yellow;
+    border: outset 5px yellow;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+#formDiv {
+    margin: auto;
+    width: 80%;
+    font-size: 30px;
+}
+
+#formDiv form {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    display: block;
+    margin: auto;
+}
+
+#formDiv form label {
+    text-align: left !important;
+    color: #fff;
+    text-shadow: -10px 10px 10px #000;
+}
+
+#formDiv input {
+    height: 30px;
+    width: 80%;
+    max-width: 600px !important;
+    border: outset 5px yellow;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+#message {
+    width: 80%;
+    max-width: 600px;
+    border: outset 5px yellow;
+    padding: 10px;
+    margin: 0;
+    margin-left: -10px;
+    margin-top: 15px;
+}
+
+#submitButton {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin: auto;
+    background: yellow;
+    border: outset 5px yellow;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    padding-top: 20px !important;
+    padding-bottom: 35px !important;
+    margin-left: -10px;
+}
+
+#errorDiv {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 25px;
+    display: none;
+}
+
+p {
+    text-align: center;
+    color: #fff;
+    text-shadow: -10px 10px 10px #000;
+    font-size: 20px;
+    padding: 5px 20px 5px 20px;
+
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    text-shadow: -10px 10px 10px #000;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(teal, white);
+    font-family: Permanent Marker;
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+html {
+    margin: 0;
+    height: 100%;
+}
+
+@media(max-width: 585px) {
+    #logo {
+        width: 80%;
+    }
+    #formDiv {
+        font-size: 25px;
+        border: solid 2px #fff;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+    #formDiv {
+        width: 100%;
+        text-align: center !important;
+        margin: auto;
+    }
+}

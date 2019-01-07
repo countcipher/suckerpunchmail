@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110963348-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-110963348-3');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send anonymous emails! 100% anonymous!  100% free!" />
+    <meta name="keywords" content="anonymous, email" />
+    <title>Sucker Punch Mail</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style1.css">
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id="mask">
+        <img id="logo" src="images/logo0.png" alt="">
+        <p>Need to get something off your chest?<br>Send an email!</p>
+        <h2>100% Free</h2>
+        <h2>100% Anonymous</h2>
+        <div id="sendMail">Send Mail</div>
+    </div>
+    <div id="errorDiv"></div>
+    <div id="formDiv">
+        <form method="post" action="send.php" name="sendEmail" id="sendEmail">
+            <label for="destinationEmail">Destination Email</label><br>
+            <input name="destinationEmail" type="email" placeholder="ex: bossman@his-email.com">
+            <br>
+            <label for="subject1">Subject</label><br>
+            <input name="subject1" type="text" placeholder="ex:  Here's What I Think Of You">
+            <br>
+            <label for="Message">Message</label><br>
+            <textarea name="message" id="message" cols="100%" rows="10"></textarea><br>
+            <input id="submitButton" type="submit" value="Send Email">
+        </form>
+    </div>
+
+
+</body>
+<script>
+    //slide away opening and reveal app
+    document.getElementById("sendMail").onclick = function() {
+        $("#mask").slideUp(function(){
+           $("body").css("overflow-y", "scroll");
+        });
+    };
+
+    //form validation
+    var sendEmail = document.getElementById("sendEmail");
+    var destinationEmail = document.sendEmail.destinationEmail;
+    var subject = document.sendEmail.subject1;
+    var message = document.sendEmail.message;
+    var errorDiv = document.getElementById("errorDiv");
+
+    sendEmail.onsubmit = function() {
+    if(destinationEmail.value == ""){
+          //errorDiv.innerHTML = "Enter an email address";
+        destinationEmail.focus();
+        return false;
+      }
+    else if(subject.value == ""){
+        //errorDiv.innerHTML = "Enter subject";
+        subject.focus();
+        return false;
+    }
+    else if(message.value == ""){
+       //errorDiv.innerHTML = "Enter your message";
+        message.focus();
+        return false;
+    }
+    };
+
+</script>
+
+</html>
